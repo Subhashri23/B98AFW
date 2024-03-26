@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import generic.BaseTest;
+import generic.Utility;
 import pages.HomePage;
 import pages.LoginPage;
 
@@ -12,14 +13,17 @@ public class ValidLogin extends BaseTest
 	@Test(priority = 1)
 	public void testValidLogin()
 	{
+		String un=Utility.getExcelData(XL_PATH, "ValidLogin",1,0);
+		String pw=Utility.getExcelData(XL_PATH, "ValidLogin",1,1);
+		
 //		1. enter valid user name: admin
 		test.info(" enter valid user name");
 		LoginPage loginPage=new LoginPage(driver);
-		loginPage.setUserName("admin");
+		loginPage.setUserName(un);
 		 
 //		2. enter valid password: pointofsale
 		test.info("enter valid password");
-		loginPage.setPassword("pointofsale");
+		loginPage.setPassword(pw);
 		
 //		3. click on go button
 		test.info("click on go button");
