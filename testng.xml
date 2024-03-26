@@ -1,0 +1,18 @@
+<suite name="AutomationSuite" parallel="tests">
+<test name="RegressionTestOnEdge">
+<parameter name="browser" value="edge"/>
+<parameter name="grid" value="yes"/>
+<parameter name="gridURL" value="https://oauth-subhashri.padmalaya-168a0:aa2d7d68-ed7b-403f-b5ab-e62f5e31eb0d@ondemand.eu-central-1.saucelabs.com:443/wd/hub"/>
+<packages>
+<package name="script"/>
+</packages>
+</test>
+<test name="RegressionTestOnChrome">
+<parameter name="browser" value="chrome"/>
+<parameter name="grid" value="yes"/>
+<parameter name="gridURL" value="http://localhost:4444"/>
+<packages>
+<package name="script"/>
+</packages>
+</test>
+</suite>
