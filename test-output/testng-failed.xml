@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="Failed suite [AutomationSuite]">
   <test thread-count="5" parallel="tests" name="RegressionTestOnChrome(failed)">
-    <parameter name="grid" value="yes"/>
+    <parameter name="grid" value="No"/>
     <parameter name="browser" value="chrome"/>
     <parameter name="gridURL" value="http://localhost:4444"/>
     <classes>
@@ -15,19 +15,19 @@
           <include name="testValidLogin"/>
         </methods>
       </class> <!-- script.DemoTest -->
-      <class name="script.DemoTest2">
+      <class name="script.ValidLogin">
         <methods>
           <include name="postCondition"/>
           <include name="initReport"/>
-          <include name="testInvalidLogin"/>
           <include name="publishReport"/>
+          <include name="testValidLogin"/>
           <include name="preCondition"/>
         </methods>
-      </class> <!-- script.DemoTest2 -->
+      </class> <!-- script.ValidLogin -->
     </classes>
   </test> <!-- RegressionTestOnChrome(failed) -->
   <test thread-count="5" parallel="tests" name="RegressionTestOnEdge(failed)">
-    <parameter name="grid" value="yes"/>
+    <parameter name="grid" value="No"/>
     <parameter name="browser" value="edge"/>
     <parameter name="gridURL" value="https://oauth-subhashri.padmalaya-168a0:aa2d7d68-ed7b-403f-b5ab-e62f5e31eb0d@ondemand.eu-central-1.saucelabs.com:443/wd/hub"/>
     <classes>
@@ -40,15 +40,15 @@
           <include name="testValidLogin"/>
         </methods>
       </class> <!-- script.DemoTest -->
-      <class name="script.DemoTest2">
+      <class name="script.ValidLogin">
         <methods>
           <include name="postCondition"/>
           <include name="initReport"/>
           <include name="publishReport"/>
-          <include name="testInvalidLogin"/>
+          <include name="testValidLogin"/>
           <include name="preCondition"/>
         </methods>
-      </class> <!-- script.DemoTest2 -->
+      </class> <!-- script.ValidLogin -->
     </classes>
   </test> <!-- RegressionTestOnEdge(failed) -->
 </suite> <!-- Failed suite [AutomationSuite] -->
